@@ -1,7 +1,7 @@
-<h1><%= @article.new_record? ? "Create new article" : "Edit Article" %></h1>
+<h1 class="text-center"><%= @article.new_record? ? "Create new article" : "Edit Article" %></h1>
 
 <%= render 'form' %>
 
-<p>
-<%= link_to "Back to Articles", articles_path %>
+<div class="col-xs-4 col-xs-offset-4">
+[ <%= link_to "Cancel and return to Articles", articles_path %> ]
 </p>
