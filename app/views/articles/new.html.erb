@@ -1,31 +1,6 @@
 <h1><%= @article.new_record? ? "Create new article" : "Edit Article" %></h1>
 
-<% if @article.errors.any? %>
-<h2>Pls check the errors and fix!</h2>
-<ul>
-<% @article.errors.full_messages.each do |msg| %>
-	<li><%= msg %></li>
-<% end %>
-</ul>
-
-<% end %>
-
-<%= form_for @article do |f| %>
-	<p>
-	<%= f.label :title %>
-	<%= f.text_field :title %>
-	</p>
-	<p>
-
-	<%= f.label :description %>
-	<%= f.text_area :description %>
-	</p>
-
-	<p>
-	<%= f.submit %>
-	</p>
-	
-<% end %>
+<%= render 'form' %>
 
 <p>
 <%= link_to "Back to Articles", articles_path %>
