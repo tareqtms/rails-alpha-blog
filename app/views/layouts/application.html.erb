@@ -9,7 +9,23 @@
   </head>
 
   <body>
+  	<%= render 'layouts/navbar' %>
   	<%= render 'layouts/messages' %>
+  	<div class="container">
     <%= yield %>
+    </div>
+
+    <div class="container">
+    	<footer class="footer">
+    		<small class="pull-left">
+Copyright © 2017 <a href="http://tareqmahmood.om/">Tareq Mahmood</a>
+    		</small>
+    		<nav class="pull-right">
+    		<ul>
+    		<li><%= link_to "About", about_path %></li>
+    		</ul>
+    		</nav>
+    	</footer>
+    </div>
   </body>
 </html>
