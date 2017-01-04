@@ -12,6 +12,7 @@
 				</div>
 				<div class="article-body">
 				<%= truncate(article.description, length: 100) %>
+					<%= render 'article_meta', article: article %>
 				</div>
 				<div class="article-actions">
 					<%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary" %>

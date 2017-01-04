@@ -1,0 +1,7 @@
+<div class="article-meta-details">
+  <small>
+    Created By: <%= article.user.username if article.user %>,
+    Created <%= time_ago_in_words(article.created_at) %> ago,
+    Updated <%= time_ago_in_words(article.updated_at) %> ago
+  </small>
+</div>
