@@ -1,4 +1,4 @@
-<h1 class="text-center">Sign up for Alpha Blog</h1>
+<h1 class="text-center"><%= @user.new_record? ? "Sign up for Alpha Blog" : "Update your account" %></h1>
 
 <%= render 'shared/errors', obj: @user %>
 
@@ -30,7 +30,7 @@
 
   <div class="form-group">
   <div class="col-sm-offset-2 col-sm-10">
-  <%= f.submit "Sign Up", class: "btn btn-primary btn-lg" %>
+  <%= f.submit @user.new_record? ? "Sign Up" : "Update Account", class: "btn btn-primary btn-lg" %>
   </div>
   </div>
   

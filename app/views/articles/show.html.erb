@@ -1,6 +1,7 @@
 <h2 class="text-center"><%= @article.title %></h2>
 
 <div class="well col-xs-8 col-xs-offset-2">
+<div ><%= render 'users/user_listing', user:@article.user %></div>
 	<%= simple_format(@article.description) %>
   <%= render 'article_meta', article: @article %>
 	<div class="article-actions">
