@@ -4,6 +4,11 @@
 <div ><%= render 'users/user_listing', user:@article.user %></div>
 	<%= simple_format(@article.description) %>
   <%= render 'article_meta', article: @article %>
+
+  <% if @article.categories.any? %>
+    <p>Categories: <%= render @article.categories %></p>
+  <% end %>
+
 	<div class="article-actions">
     <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
 		<%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>

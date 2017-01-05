@@ -11,6 +11,10 @@
         <%= truncate(article.description, length: 100) %>
           <%= render 'articles/article_meta', article: article %>
         </div>
+        <% if article.categories.any? %>
+          <p>Categories: <%= render article.categories %> 
+        <% end %>
+
         <% if logged_in? && (current_user == article.user || current_user.admin?) %>
         <div class="article-actions">
           <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
