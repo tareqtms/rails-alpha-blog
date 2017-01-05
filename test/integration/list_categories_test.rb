@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ListCategoriesTest < ActionDispatch::IntegrationTest
   def setup
-    @category1 = Category.create(name: "books")
+    @category1 = Category.create(name: "sports")
     @category2 = Category.create(name: "games")
   end
 
